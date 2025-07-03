@@ -1,0 +1,16 @@
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\obj\Debug\net8.0\E-CommerceAPI.Application.csproj.AssemblyReference.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\obj\Debug\net8.0\E-CommerceAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\obj\Debug\net8.0\E-CommerceAPI.Application.AssemblyInfoInputs.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\obj\Debug\net8.0\E-CommerceAPI.Application.AssemblyInfo.cs
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\obj\Debug\net8.0\E-CommerceAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\obj\Debug\net8.0\E-CommerceAPI.Application.sourcelink.json
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\bin\Debug\net8.0\E-CommerceAPI.Application.deps.json
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\bin\Debug\net8.0\E-CommerceAPI.Application.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\bin\Debug\net8.0\E-CommerceAPI.Application.pdb
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\bin\Debug\net8.0\E-CommerceAPI.Domain.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\bin\Debug\net8.0\E-CommerceAPI.Domain.pdb
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\obj\Debug\net8.0\E-Commer.D403A493.Up2Date
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\obj\Debug\net8.0\E-CommerceAPI.Application.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\obj\Debug\net8.0\refint\E-CommerceAPI.Application.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\obj\Debug\net8.0\E-CommerceAPI.Application.pdb
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Application\obj\Debug\net8.0\ref\E-CommerceAPI.Application.dll

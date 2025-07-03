@@ -1,0 +1,15 @@
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\obj\Debug\net8.0\E-CommerceAPI.Domain.csproj.AssemblyReference.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\obj\Debug\net8.0\E-CommerceAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\obj\Debug\net8.0\E-CommerceAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\obj\Debug\net8.0\E-CommerceAPI.Domain.AssemblyInfo.cs
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\obj\Debug\net8.0\E-CommerceAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\obj\Debug\net8.0\E-CommerceAPI.Domain.sourcelink.json
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\bin\Debug\net8.0\E-CommerceAPI.Domain.deps.json
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\bin\Debug\net8.0\E-CommerceAPI.Domain.runtimeconfig.json
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\bin\Debug\net8.0\E-CommerceAPI.Domain.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\bin\Debug\net8.0\E-CommerceAPI.Domain.pdb
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\obj\Debug\net8.0\E-CommerceAPI.Domain.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\obj\Debug\net8.0\refint\E-CommerceAPI.Domain.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\obj\Debug\net8.0\E-CommerceAPI.Domain.pdb
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\obj\Debug\net8.0\E-CommerceAPI.Domain.genruntimeconfig.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Core\E-CommerceAPI.Domain\obj\Debug\net8.0\ref\E-CommerceAPI.Domain.dll

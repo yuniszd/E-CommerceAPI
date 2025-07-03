@@ -1,0 +1,408 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj",
+        "projectName": "E-CommerceAPI.Application",
+        "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj",
+        "packagesPath": "C:\\Users\\Yunis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yunis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj",
+        "projectName": "E-CommerceAPI.Domain",
+        "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\Yunis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yunis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj",
+        "projectName": "E-CommerceAPI.Infrastructure",
+        "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Yunis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yunis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            },
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.102, 9.0.102]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj",
+        "projectName": "E-CommerceAPI.Persistence",
+        "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Yunis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yunis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj",
+        "projectName": "E-CommerceAPI.WebApi",
+        "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj",
+        "packagesPath": "C:\\Users\\Yunis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yunis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj"
+              },
+              "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj"
+              },
+              "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

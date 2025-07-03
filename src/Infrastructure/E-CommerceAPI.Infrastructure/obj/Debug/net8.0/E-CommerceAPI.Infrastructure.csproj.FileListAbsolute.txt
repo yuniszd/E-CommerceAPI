@@ -1,0 +1,12 @@
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\bin\Debug\net8.0\E-CommerceAPI.Infrastructure.deps.json
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\bin\Debug\net8.0\E-CommerceAPI.Infrastructure.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\bin\Debug\net8.0\E-CommerceAPI.Infrastructure.pdb
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\E-CommerceAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\E-CommerceAPI.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\E-CommerceAPI.Infrastructure.AssemblyInfo.cs
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\E-CommerceAPI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\E-CommerceAPI.Infrastructure.sourcelink.json
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\E-CommerceAPI.Infrastructure.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\refint\E-CommerceAPI.Infrastructure.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\E-CommerceAPI.Infrastructure.pdb
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\ref\E-CommerceAPI.Infrastructure.dll
