@@ -1,5 +1,8 @@
 using E_CommerceAPI.Application.Validations.UserValidations;
 using E_CommerceAPI.Domain.Entities;
+using E_CommerceAPI.Persistence.Services;
+using FluentValidation;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -12,12 +15,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // FluentValidation
-builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<UserRegisterDtoValidator>();
 
-// DbContext
+builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<TokenService>();
+builder.Services.AddEndpointsApiExplorer();
+
 
 // Identity
 builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
@@ -50,8 +60,14 @@ builder.Services.AddAuthentication(options =>
 
 // Add Authorization
 builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("VerifiedSellerOnly", policy =>
+        policy.RequireClaim("IsVerifiedSeller", "True"));
+});
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 
@@ -59,6 +75,22 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication(); // <-- Authentication middleware ?lav? et
 app.UseAuthorization();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+
+    string[] roles = { "Admin", "Moderator", "Seller", "Buyer" };
+
+    foreach (var role in roles)
+    {
+        if (!await roleManager.RoleExistsAsync(role))
+        {
+            await roleManager.CreateAsync(new IdentityRole(role));
+        }
+    }
+}
 
 app.MapControllers();
 

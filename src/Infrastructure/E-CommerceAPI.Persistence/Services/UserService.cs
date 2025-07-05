@@ -3,15 +3,23 @@ using E_CommerceAPI.Application.DTOs.Users;
 using E_CommerceAPI.Application.Shared;
 using E_CommerceAPI.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
 
 namespace E_CommerceAPI.Persistence.Services;
 
 public class UserService : IUserService
 {
     public UserManager<AppUser> _userManager {  get; set; }
-    public UserService(UserManager<AppUser> userManager)
+    public SignInManager<AppUser> _signInManager { get; set; }
+
+    private readonly IConfiguration _configuration;
+    public UserService(UserManager<AppUser> userManager,
+        SignInManager<AppUser> signInManager,
+        IConfiguration configuration)
     {
-        _userManager = userManager; 
+        _userManager = userManager;
+        _signInManager = signInManager;
+        _configuration = configuration;
     }
     public async Task<BaseResponse<string>> Register(UserRegisterDto dto)
     {

@@ -8,5 +8,6 @@ public class AppUser : IdentityUser
     public ICollection<Order> Orders { get; set; }
     public ICollection<Favourite> Favourites { get; set; }
     public ICollection<Review> Reviews { get; set; }
+    public ICollection<RefreshToken> RefreshTokens { get; set; }
 }
 
