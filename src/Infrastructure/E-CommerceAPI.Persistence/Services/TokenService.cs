@@ -1,14 +1,16 @@
-﻿using E_CommerceAPI.Application.Shared.Settings;
+﻿using E_CommerceAPI.Application.Abstracts.Services;
+using E_CommerceAPI.Application.Shared.Settings;
 using E_CommerceAPI.Domain.Entities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace E_CommerceAPI.Persistence.Services;
 
-public class TokenService
+public class TokenService : ITokenService
 {
     private readonly JWTSettings _jwtSettings;
 
@@ -46,9 +48,15 @@ public class TokenService
 
     public RefreshToken GenerateRefreshToken(string userId)
     {
+        var randomNumber = new byte[64];
+        using (var rng = RandomNumberGenerator.Create())
+        {
+            rng.GetBytes(randomNumber);
+        }
+
         var refreshToken = new RefreshToken
         {
-            Token = Guid.NewGuid().ToString(),
+            Token = Convert.ToBase64String(randomNumber),
             AppUserId = userId,
             Created = DateTime.UtcNow,
             Expires = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpirationDays)

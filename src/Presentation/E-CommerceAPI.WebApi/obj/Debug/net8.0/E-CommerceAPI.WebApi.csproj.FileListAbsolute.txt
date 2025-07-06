@@ -1,3 +1,10 @@
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.csproj.AssemblyReference.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.AssemblyInfoInputs.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.AssemblyInfo.cs
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.sourcelink.json
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\appsettings.json
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\E-CommerceAPI.WebApi.exe
@@ -51,6 +58,8 @@ C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\System.ClientModel.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\System.Composition.AttributedModel.dll
@@ -142,13 +151,7 @@ C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\E-CommerceAPI.Infrastructure.pdb
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\E-CommerceAPI.Persistence.pdb
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\E-CommerceAPI.Domain.pdb
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.csproj.AssemblyReference.cache
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.AssemblyInfoInputs.cache
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.AssemblyInfo.cs
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.csproj.CoreCompileInputs.cache
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.sourcelink.json
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\staticwebassets\msbuild.E-CommerceAPI.WebApi.Microsoft.AspNetCore.StaticWebAssets.props

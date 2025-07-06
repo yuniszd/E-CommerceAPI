@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using E_CommerceAPI.Application.Abstracts.Services;
+using E_CommerceAPI.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -6,38 +9,34 @@ namespace E_CommerceAPI.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoriesController : ControllerBase
+    public class CategoryController : ControllerBase
     {
-        // GET: api/<CategoriesController>
+        private readonly ICategoryService _categoryService;
+
+        public CategoryController(ICategoryService categoryService)
+        {
+            _categoryService = categoryService;
+        }
+
+        // ✅ GET: api/categories
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> GetCategories()
         {
-            return new string[] { "value1", "value2" };
+            var categories = await _categoryService.GetAllCategoriesAsync();
+            return Ok(categories);
         }
 
-        // GET api/<CategoriesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<CategoriesController>
+        // ✅ POST: api/categories
         [HttpPost]
-        public void Post([FromBody] string value)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> CreateCategory([FromBody] Category category)
         {
-        }
+            if (string.IsNullOrWhiteSpace(category.Name))
+                return BadRequest("Category name is required.");
 
-        // PUT api/<CategoriesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CategoriesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            var createdCategory = await _categoryService.CreateCategoryAsync(category);
+            return Ok(createdCategory);
         }
     }
 }
+

@@ -1,4 +1,4 @@
-using E_CommerceAPI.Application.Validations.UserValidations;
+﻿using E_CommerceAPI.Application.Validations.UserValidations;
 using E_CommerceAPI.Domain.Entities;
 using E_CommerceAPI.Persistence.Services;
 using FluentValidation;
@@ -7,36 +7,71 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.OpenApi.Models;
+using E_CommerceAPI.Application.Abstracts.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
+
+builder.Services.AddEndpointsApiExplorer();
+
+// Swagger - JWT dəstəklə
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "E-Commerce API", Version = "v1" });
+
+    // Swagger üçün JWT Authorization konfiqurasiyası
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference= new OpenApiReference
+                {
+                    Type=ReferenceType.SecurityScheme,
+                    Id="Bearer"
+                },
+                Scheme="oauth2",
+                Name="Bearer",
+                In=ParameterLocation.Header
+            },
+            new List<string>()
+        }
+    });
+});
 
 // FluentValidation
 builder.Services.AddValidatorsFromAssemblyContaining<UserRegisterDtoValidator>();
 
-builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<AppDbContext>()
-    .AddDefaultTokenProviders();
-
-builder.Services.AddScoped<TokenService>();
-builder.Services.AddEndpointsApiExplorer();
-
-
-// Identity
 builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
 {
     options.Password.RequireDigit = true;
     options.Password.RequiredLength = 6;
 })
-.AddEntityFrameworkStores<AppDbContext>()
-.AddDefaultTokenProviders();
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<ITokenService,TokenService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IRoleService, RoleService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 // Authentication - JWT
 builder.Services.AddAuthentication(options =>
@@ -58,8 +93,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// Add Authorization
-builder.Services.AddAuthorization();
+// Authorization
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("VerifiedSellerOnly", policy =>
@@ -68,15 +102,23 @@ builder.Services.AddAuthorization(options =>
 
 var app = builder.Build();
 
-
-// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "E-Commerce API V1");
+        c.RoutePrefix = string.Empty; // Swagger root-da açılsın
+    });
+}
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication(); // <-- Authentication middleware ?lav? et
+app.UseAuthentication();
 app.UseAuthorization();
 
-using (var scope = app.Services.CreateScope())
+// Roles yaradılması - düzgün async pattern
+await using (var scope = app.Services.CreateAsyncScope())
 {
     var services = scope.ServiceProvider;
     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
@@ -94,4 +136,4 @@ using (var scope = app.Services.CreateScope())
 
 app.MapControllers();
 
-app.Run();
+await app.RunAsync();
