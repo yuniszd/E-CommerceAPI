@@ -1,4 +1,6 @@
-﻿using E_CommerceAPI.Domain.Entities;
+﻿using E_CommerceAPI.Application.Abstracts.Services;
+using E_CommerceAPI.Application.DTOs.ProductDTOs;
+using E_CommerceAPI.Domain.Entities;
 using E_CommerceAPI.Persistence.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,24 +13,24 @@ namespace E_CommerceAPI.WebApi.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly ProductService _service;
+        private readonly IProductService _service;
 
-        public ProductsController(ProductService service)
+        public ProductsController(IProductService service)
         {
             _service = service;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] int? categoryId, [FromQuery] decimal? minPrice, [FromQuery] decimal? maxPrice, [FromQuery] string search)
+        public async Task<IActionResult> GetAll([FromQuery] Guid? categoryId, [FromQuery] decimal? minPrice, [FromQuery] decimal? maxPrice, [FromQuery] string search)
         {
-            var products = await _service.GetAllProducts(categoryId, minPrice, maxPrice, search);
+            var products = await _service.GetAllAsync(categoryId, minPrice, maxPrice, search);
             return Ok(products);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
-            var product = await _service.GetProductById(id);
+            var product = await _service.GetProductByIdAsync(id);
             if (product == null)
                 return NotFound();
 
@@ -37,17 +39,20 @@ namespace E_CommerceAPI.WebApi.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Seller")]
-        public async Task<IActionResult> Create(Product product)
+        public async Task<IActionResult> Create([FromBody] ProductCreateDto dto)
         {
-            var created = await _service.CreateProduct(product);
-            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+            var created = await _service.CreateAsync(dto);
+            if (!created)
+                return Forbid();
+
+            return Ok("Product created successfully.");
         }
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Seller")]
-        public async Task<IActionResult> Update(int id, Product product)
+        public async Task<IActionResult> Update(Guid id, [FromBody] ProductCreateDto dto)
         {
-            var result = await _service.UpdateProduct(id, product);
+            var result = await _service.UpdateAsync(id, dto);
             if (!result)
                 return Forbid();
 
@@ -56,9 +61,9 @@ namespace E_CommerceAPI.WebApi.Controllers
 
         [HttpDelete("{id}")]
         [Authorize(Roles = "Seller")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            var result = await _service.DeleteProduct(id);
+            var result = await _service.DeleteAsync(id);
             if (!result)
                 return Forbid();
 
@@ -69,7 +74,7 @@ namespace E_CommerceAPI.WebApi.Controllers
         [Authorize(Roles = "Seller")]
         public async Task<IActionResult> GetMyProducts()
         {
-            var products = await _service.GetMyProducts();
+            var products = await _service.GetMyProductsAsync();
             return Ok(products);
         }
     }

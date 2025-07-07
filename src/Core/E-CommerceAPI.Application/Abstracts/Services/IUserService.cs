@@ -3,15 +3,18 @@ using E_CommerceAPI.Application.DTOs.UserDTOs;
 using E_CommerceAPI.Application.DTOs.Users;
 using E_CommerceAPI.Application.Shared;
 using E_CommerceAPI.Domain.Entities;
+using static E_CommerceAPI.Application.Shared.Permissions;
 
 namespace E_CommerceAPI.Application.Abstracts.Services;
 
 public interface IUserService
 {
-    Task<BaseResponse<TokenResponse>> LoginAsync(UserLoginDto dto);
-    Task<BaseResponse<string>> RegisterAsync(UserRegisterDto dto);
-    Task<BaseResponse<TokenResponse>> RefreshTokenAsync(RefreshTokenRequestDto dto);
-    Task<BaseResponse<string>> AddRole(UserAddRoleDto dto);
-    Task<BaseResponse<string>> ResetPassword(UserChangePasswordDto dto);
-    Task<BaseResponse<string>> ConfirmEmail(string userId,string token);
+    public interface IUserService
+    {
+        Task<BaseResponse<TokenResponse>> LoginAsync(UserLoginDto dto);
+        Task<BaseResponse<TokenResponse>> RefreshTokenAsync(string refreshToken);
+        Task SendEmailAsync(string toEmail, string subject, string body);
+        Task SendWelcomeEmailAsync(AppUser user);
+        Task SendOrderNotificationEmailAsync(AppUser buyer, AppUser seller, Product product);
+    }
 }
