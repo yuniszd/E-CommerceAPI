@@ -1,4 +1,5 @@
-﻿using E_CommerceAPI.Application.DTOs.RoleDTOs;
+﻿using E_CommerceAPI.Application.Abstracts.Services;
+using E_CommerceAPI.Application.DTOs.RoleDTOs;
 using E_CommerceAPI.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -8,94 +9,64 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace E_CommerceAPI.WebApi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    [Authorize(Roles = "Admin,Moderator")]
-    public class RoleController : ControllerBase
+    namespace E_CommerceAPI.WebApi.Controllers
     {
-        private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly UserManager<AppUser> _userManager;
-
-        public RoleController(RoleManager<IdentityRole> roleManager, UserManager<AppUser> userManager)
-        {
-            _roleManager = roleManager;
-            _userManager = userManager;
-        }
-
-        // ✅ GET: api/role
-        [HttpGet]
+        [Route("api/[controller]")]
+        [ApiController]
         [Authorize(Roles = "Admin,Moderator")]
-        public IActionResult GetRoles()
+        public class RoleController : ControllerBase
         {
-            var roles = _roleManager.Roles
-                .Select(r => new RoleResponseDto
-                {
-                    Id = r.Id,
-                    Name = r.Name
-                })
-                .ToList();
+            private readonly IRoleService _roleService;
 
-            return Ok(roles);
-        }
-
-        // ✅ POST: api/role
-        [HttpPost]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> CreateRole([FromBody] CreateRoleDto dto)
-        {
-            if (await _roleManager.RoleExistsAsync(dto.RoleName))
-                return BadRequest($"The role '{dto.RoleName}' already exists.");
-
-            var result = await _roleManager.CreateAsync(new IdentityRole(dto.RoleName));
-
-            if (result.Succeeded)
-                return Ok($"Role '{dto.RoleName}' has been created.");
-
-            return BadRequest(result.Errors);
-        }
-
-        // ✅ DELETE: api/role/{roleName}
-        [HttpDelete("{roleName}")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> DeleteRole(string roleName)
-        {
-            var role = await _roleManager.FindByNameAsync(roleName);
-
-            if (role == null)
-                return NotFound($"Role '{roleName}' not found.");
-
-            var result = await _roleManager.DeleteAsync(role);
-
-            if (result.Succeeded)
-                return Ok($"Role '{roleName}' has been deleted.");
-
-            return BadRequest(result.Errors);
-        }
-
-        // ✅ POST: api/role/assign
-        [HttpPost("assign")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> AssignRole([FromBody] AssignRoleDto dto)
-        {
-            var user = await _userManager.FindByIdAsync(dto.UserId);
-            if (user == null)
-                return NotFound("User not found.");
-
-            foreach (var roleName in dto.Roles)
+            public RoleController(IRoleService roleService)
             {
-                if (!await _roleManager.RoleExistsAsync(roleName))
-                    return NotFound($"Role '{roleName}' not found.");
-
-                var alreadyInRole = await _userManager.IsInRoleAsync(user, roleName);
-                if (!alreadyInRole)
-                {
-                    var result = await _userManager.AddToRoleAsync(user, roleName);
-                    if (!result.Succeeded)
-                        return BadRequest(result.Errors);
-                }
+                _roleService = roleService;
             }
 
-            return Ok($"Roles [{string.Join(", ", dto.Roles)}] have been assigned to the user.");
+            // ✅ GET: api/role
+            [HttpGet]
+            public async Task<IActionResult> GetRoles()
+            {
+                var roles = await _roleService.GetRolesAsync();
+                return Ok(roles);
+            }
+
+            // ✅ POST: api/role
+            [HttpPost]
+            [Authorize(Roles = "Admin")]
+            public async Task<IActionResult> CreateRole([FromBody] CreateRoleDto dto)
+            {
+                var success = await _roleService.CreateRoleAsync(dto.RoleName);
+                if (success)
+                    return Ok($"Role '{dto.RoleName}' has been created.");
+
+                return BadRequest($"The role '{dto.RoleName}' already exists.");
+            }
+
+            // ✅ DELETE: api/role/{roleName}
+            [HttpDelete("{roleName}")]
+            [Authorize(Roles = "Admin")]
+            public async Task<IActionResult> DeleteRole(string roleName)
+            {
+                var success = await _roleService.DeleteRoleAsync(roleName);
+                if (success)
+                    return Ok($"Role '{roleName}' has been deleted.");
+
+                return NotFound($"Role '{roleName}' not found.");
+            }
+
+            // ✅ POST: api/role/assign
+            [HttpPost("assign")]
+            [Authorize(Roles = "Admin")]
+            public async Task<IActionResult> AssignRole([FromBody] AssignRoleDto dto)
+            {
+                var (success, errors) = await _roleService.AssignRolesAsync(dto.UserId, dto.Roles);
+
+                if (success)
+                    return Ok($"Roles [{string.Join(", ", dto.Roles)}] have been assigned to the user.");
+
+                return BadRequest(errors);
+            }
         }
     }
 }

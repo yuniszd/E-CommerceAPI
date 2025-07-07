@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\presentation\\e-commerceapi.webapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|solutionrelative:src\\presentation\\e-commerceapi.webapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\infrastructure\\e-commerceapi.persistence\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|solutionrelative:src\\infrastructure\\e-commerceapi.persistence\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -74,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,7 +86,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T14:32:46.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "BaseResponse.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Shared\\BaseResponse.cs",
               "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Application\\Shared\\BaseResponse.cs",
@@ -95,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TokenResponse.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Shared\\TokenResponse.cs",
               "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Application\\Shared\\TokenResponse.cs",
@@ -108,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TokenService.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\TokenService.cs",
@@ -121,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AccountsController.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\AccountsController.cs",
               "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\AccountsController.cs",
@@ -134,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\UserService.cs",
@@ -147,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IUserService.cs",
               "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IUserService.cs",
@@ -160,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\OrdersController.cs",
@@ -173,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\OrderService.cs",
@@ -186,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\Category.cs",
               "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Domain\\Entities\\Category.cs",
@@ -199,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\CategoryService.cs",
@@ -212,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "IRoleService.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IRoleService.cs",
               "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IRoleService.cs",
@@ -225,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "RoleService.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\RoleService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\RoleService.cs",
@@ -238,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ITokenServices.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\ITokenServices.cs",
               "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\ITokenServices.cs",
@@ -251,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "RefreshToken.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\RefreshToken.cs",
               "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Domain\\Entities\\RefreshToken.cs",
@@ -264,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "RolesController.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\RolesController.cs",
               "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\RolesController.cs",
@@ -277,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Program.cs",
               "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Program.cs",

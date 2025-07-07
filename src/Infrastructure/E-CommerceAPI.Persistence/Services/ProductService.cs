@@ -1,10 +1,9 @@
 ﻿using E_CommerceAPI.Application.Abstracts.Services;
+using E_CommerceAPI.Application.DTOs.ProductDTOs;
 using E_CommerceAPI.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
-
-namespace E_CommerceAPI.Persistence.Services;
 
 public class ProductService : IProductService
 {
@@ -17,9 +16,19 @@ public class ProductService : IProductService
         _httpContextAccessor = httpContextAccessor;
     }
 
-    public async Task<List<Product>> GetAllProducts(int? categoryId, decimal? minPrice, decimal? maxPrice, string search)
+    private string GetUserId() =>
+        _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+    private bool IsSeller() =>
+        _httpContextAccessor.HttpContext.User.IsInRole("Seller");
+
+    public async Task<List<ProductResponseDto>> GetAllAsync(Guid? categoryId, decimal? minPrice, decimal? maxPrice, string search)
     {
-        var query = _context.Products.AsQueryable();
+        var query = _context.Products
+            .Include(p => p.Images)
+            .Include(p => p.Category)
+            .Include(p => p.Owner)
+            .AsQueryable();
 
         if (categoryId.HasValue)
             query = query.Where(p => p.CategoryId == categoryId);
@@ -30,65 +39,156 @@ public class ProductService : IProductService
         if (maxPrice.HasValue)
             query = query.Where(p => p.Price <= maxPrice);
 
-        if (!string.IsNullOrEmpty(search))
+        if (!string.IsNullOrWhiteSpace(search))
             query = query.Where(p => p.Title.Contains(search) || p.Description.Contains(search));
 
-        return await query.ToListAsync();
+        var products = await query.ToListAsync();
+
+        return products.Select(p => new ProductResponseDto
+        {
+            Id = p.Id,
+            Title = p.Title,
+            Description = p.Description,
+            Price = p.Price,
+            ImageUrls = p.Images.Select(i => i.ImageUrl).ToList(),
+            CategoryId = p.CategoryId,
+            CategoryName = p.Category?.Name,
+            OwnerId = p.OwnerId,
+            OwnerName = p.Owner?.UserName
+        }).ToList();
     }
 
-    public async Task<Product?> GetProductById(int id)
+    public async Task<ProductResponseDto> GetByIdAsync(Guid id)
     {
-        return await _context.Products.FindAsync(id);
+        var p = await _context.Products
+            .Include(p => p.Images)
+            .Include(p => p.Category)
+            .Include(p => p.Owner)
+            .FirstOrDefaultAsync(p => p.Id == id);
+
+        if (p == null) return null;
+
+        return new ProductResponseDto
+        {
+            Id = p.Id,
+            Title = p.Title,
+            Description = p.Description,
+            Price = p.Price,
+            ImageUrls = p.Images.Select(i => i.ImageUrl).ToList(),
+            CategoryId = p.CategoryId,
+            CategoryName = p.Category?.Name,
+            OwnerId = p.OwnerId,
+            OwnerName = p.Owner?.UserName
+        };
     }
 
-    public async Task<Product> CreateProduct(Product product)
+    public async Task<bool> CreateAsync(ProductCreateDto dto)
     {
-        var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-        product.OwnerId = userId;
+        if (!IsSeller()) return false;
+
+        var userId = GetUserId();
+
+        var product = new Product
+        {
+            Id = Guid.NewGuid(),
+            Title = dto.Title,
+            Description = dto.Description,
+            Price = dto.Price,
+            CategoryId = dto.CategoryId,
+            OwnerId = userId,
+            Images = new List<ProductImage>
+            {
+                new ProductImage { ImageUrl = dto.ImageUrl }
+            }
+        };
 
         _context.Products.Add(product);
         await _context.SaveChangesAsync();
-        return product;
+        return true;
     }
 
-    public async Task<bool> UpdateProduct(int id, Product updatedProduct)
+    public async Task<bool> UpdateAsync(Guid id, ProductCreateDto dto)
     {
-        var product = await _context.Products.FindAsync(id);
-        if (product == null)
-            return false;
+        var userId = GetUserId();
 
-        var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (product.OwnerId != userId)
-            return false;
+        var product = await _context.Products.Include(p => p.Images).FirstOrDefaultAsync(p => p.Id == id);
+        if (product == null) return false;
 
-        product.Title = updatedProduct.Title;
-        product.Description = updatedProduct.Description;
-        product.Price = updatedProduct.Price;
-        product.Images = updatedProduct.Images;
-        product.CategoryId = updatedProduct.CategoryId;
+        if (product.OwnerId != userId) return false;
+
+        product.Title = dto.Title;
+        product.Description = dto.Description;
+        product.Price = dto.Price;
+        product.CategoryId = dto.CategoryId;
+
+        // Şəkilləri silib tək yeni şəkil əlavə et
+        product.Images.Clear();
+        product.Images.Add(new ProductImage { ImageUrl = dto.ImageUrl });
 
         await _context.SaveChangesAsync();
         return true;
     }
 
-    public async Task<bool> DeleteProduct(int id)
+    public async Task<bool> DeleteAsync(Guid id)
     {
-        var product = await _context.Products.FindAsync(id);
-        if (product == null)
-            return false;
+        var userId = GetUserId();
 
-        var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (product.OwnerId != userId)
-            return false;
+        var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
+        if (product == null) return false;
+
+        if (product.OwnerId != userId) return false;
 
         _context.Products.Remove(product);
         await _context.SaveChangesAsync();
         return true;
     }
 
-    public async Task<List<Product>> GetMyProducts()
+    public async Task<List<ProductResponseDto>> GetMyProductsAsync()
     {
-        var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-        return await _context.Products.Where(p => p.OwnerId == userId).ToListAsync();
+        var userId = GetUserId();
+
+        var products = await _context.Products
+            .Include(p => p.Images)
+            .Include(p => p.Category)
+            .Where(p => p.OwnerId == userId)
+            .ToListAsync();
+
+        return products.Select(p => new ProductResponseDto
+        {
+            Id = p.Id,
+            Title = p.Title,
+            Description = p.Description,
+            Price = p.Price,
+            ImageUrls = p.Images.Select(i => i.ImageUrl).ToList(),
+            CategoryId = p.CategoryId,
+            CategoryName = p.Category?.Name,
+            OwnerId = p.OwnerId,
+            OwnerName = p.Owner?.UserName
+        }).ToList();
+    }
+
+    public async Task<ProductResponseDto> GetProductByIdAsync(Guid id)
+    {
+        var product = await _context.Products
+            .Include(p => p.Category)
+            .Include(p => p.Images)
+            .Include(p => p.Owner)
+            .FirstOrDefaultAsync(p => p.Id == id);
+
+        if (product == null)
+            return null;
+
+        return new ProductResponseDto
+        {
+            Id = product.Id,
+            Title = product.Title,
+            Description = product.Description,
+            Price = product.Price,
+            CategoryId = product.CategoryId,
+            CategoryName = product.Category?.Name,
+            OwnerId = product.OwnerId,
+            OwnerName = product.Owner?.UserName,
+            ImageUrls = product.Images.Select(i => i.ImageUrl).ToList()
+        };
     }
 }

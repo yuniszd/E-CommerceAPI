@@ -2,11 +2,11 @@
 
     public class Product
     {
-    public int Id { get; set; }
+    public Guid Id { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
     public decimal Price { get; set; }
-    public int CategoryId { get; set; }
+    public Guid CategoryId { get; set; }
     public string OwnerId { get; set; }
     public Category? Category { get; set; }
     public AppUser Owner { get; set; }

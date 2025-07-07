@@ -1,4 +1,5 @@
 ﻿using E_CommerceAPI.Application.Abstracts.Services;
+using E_CommerceAPI.Application.DTOs.CategoryDTOs;
 using E_CommerceAPI.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -29,12 +30,12 @@ namespace E_CommerceAPI.WebApi.Controllers
         // ✅ POST: api/categories
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> CreateCategory([FromBody] Category category)
+        public async Task<IActionResult> CreateCategory([FromBody] CategoryCreateDto dto)
         {
-            if (string.IsNullOrWhiteSpace(category.Name))
+            if (string.IsNullOrWhiteSpace(dto.Name))
                 return BadRequest("Category name is required.");
 
-            var createdCategory = await _categoryService.CreateCategoryAsync(category);
+            var createdCategory = await _categoryService.CreateCategoryAsync(dto);
             return Ok(createdCategory);
         }
     }

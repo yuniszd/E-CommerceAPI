@@ -9,8 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Abstracts\Repositories\" />
-    <Folder Include="DTOs\CategoryDTOs\" />
-    <Folder Include="DTOs\NewFolder\" />
     <Folder Include="Shared\Helpers\" />
   </ItemGroup>
 
