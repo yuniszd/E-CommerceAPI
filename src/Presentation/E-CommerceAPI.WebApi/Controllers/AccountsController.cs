@@ -67,7 +67,6 @@ namespace E_CommerceAPI.WebApi.Controllers
             return Ok("User registered successfully as " + dto.Role + ".");
         }
         
-        // ✅ POST: api/accounts/login
         [ProducesResponseType(typeof(BaseResponse<TokenResponse>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseResponse<string>), StatusCodes.Status401Unauthorized)]
         [HttpPost("login")]
@@ -89,7 +88,6 @@ namespace E_CommerceAPI.WebApi.Controllers
             // ✅ Refresh Token Generate
             var refreshToken = _tokenService.GenerateRefreshToken(user.Id);
 
-            // Refresh Token-i user obyektinə əlavə et
             user.RefreshTokens.Add(refreshToken);
             await _context.SaveChangesAsync();
 

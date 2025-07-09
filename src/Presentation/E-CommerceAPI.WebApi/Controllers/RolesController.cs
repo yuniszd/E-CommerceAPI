@@ -23,7 +23,6 @@ namespace E_CommerceAPI.WebApi.Controllers
                 _roleService = roleService;
             }
 
-            // ✅ GET: api/role
             [HttpGet]
             public async Task<IActionResult> GetRoles()
             {
@@ -31,7 +30,6 @@ namespace E_CommerceAPI.WebApi.Controllers
                 return Ok(roles);
             }
 
-            // ✅ POST: api/role
             [HttpPost]
             [Authorize(Roles = "Admin")]
             public async Task<IActionResult> CreateRole([FromBody] CreateRoleDto dto)
@@ -42,8 +40,7 @@ namespace E_CommerceAPI.WebApi.Controllers
 
                 return BadRequest($"The role '{dto.RoleName}' already exists.");
             }
-
-            // ✅ DELETE: api/role/{roleName}
+            
             [HttpDelete("{roleName}")]
             [Authorize(Roles = "Admin")]
             public async Task<IActionResult> DeleteRole(string roleName)

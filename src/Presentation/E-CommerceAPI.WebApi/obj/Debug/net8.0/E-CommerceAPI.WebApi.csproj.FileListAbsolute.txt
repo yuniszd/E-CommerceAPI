@@ -3,9 +3,9 @@ C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.AssemblyInfoInputs.cache
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.AssemblyInfo.cs
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.csproj.CoreCompileInputs.cache
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.sourcelink.json
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\obj\Debug\net8.0\E-CommerceAPI.WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\appsettings.json
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\E-CommerceAPI.WebApi.exe
@@ -19,9 +19,11 @@ C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Humanizer.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Presentation\E-CommerceAPI.WebApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll

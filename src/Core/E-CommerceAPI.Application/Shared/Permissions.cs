@@ -62,12 +62,12 @@ public static class Permissions
         };
     }
 
-    public static class Role
+    public static class Roles
     {
-        public const string GetAllPermissions = "Permissions.Users.GetAllPermissions";
-        public const string Create = "Permissions.Users.Create";
-        public const string Update = "Permissions.Users.Update";
-        public const string Delete = "Permissions.Users.Delete";
+        public const string GetAllPermissions = "Permissions.Roles.GetAllPermissions";
+        public const string Create = "Permissions.Roles.Create";
+        public const string Update = "Permissions.Roles.Update";
+        public const string Delete = "Permissions.Roles.Delete";
 
 
         public static List<string> All => new()

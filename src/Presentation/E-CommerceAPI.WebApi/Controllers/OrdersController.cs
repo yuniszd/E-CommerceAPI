@@ -21,7 +21,7 @@ namespace E_CommerceAPI.WebApi.Controllers
         // ✅ POST /api/orders
         [HttpPost]
         [Authorize(Roles = "Buyer")]
-        public async Task<IActionResult> CreateOrder([FromBody] int productId)
+        public async Task<IActionResult> CreateOrder([FromBody] Guid productId)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace E_CommerceAPI.WebApi.Controllers
 
         // ✅ GET /api/orders/{id}
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetOrderById(int id)
+        public async Task<IActionResult> GetOrderById(Guid id)
         {
             var order = await _orderService.GetOrderByIdAsync(id);
             if (order == null)

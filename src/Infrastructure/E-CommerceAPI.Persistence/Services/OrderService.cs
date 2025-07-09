@@ -17,12 +17,13 @@ public class OrderService : IOrderService
         _httpContextAccessor = httpContextAccessor;
     }
 
-    public async Task<Order> CreateOrderAsync(int productId)
+    public async Task<Order> CreateOrderAsync(Guid productId)
     {
         var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
         var product = await _context.Products.FindAsync(productId);
         if (product == null)
             throw new Exception("Product not found.");
+
 
         var order = new Order
         {
@@ -55,7 +56,7 @@ public class OrderService : IOrderService
             .ToListAsync();
     }
 
-    public async Task<Order?> GetOrderByIdAsync(int id)
+    public async Task<Order?> GetOrderByIdAsync(Guid id)
     {
         var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
 

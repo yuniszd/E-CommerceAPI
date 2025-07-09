@@ -10,20 +10,19 @@ using System.Text;
 using Microsoft.OpenApi.Models;
 using E_CommerceAPI.Application.Abstracts.Services;
 using E_CommerceAPI.Application.Shared.Settings;
+using E_CommerceAPI.Application.Shared;
+using E_CommerceAPI.Infrastructure.Authorization;
+using Microsoft.AspNetCore.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-
 builder.Services.AddEndpointsApiExplorer();
 
-// Swagger - JWT dəstəklə
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "E-Commerce API", Version = "v1" });
-
-    // Swagger üçün JWT Authorization konfiqurasiyası
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
@@ -52,7 +51,6 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// FluentValidation
 builder.Services.AddValidatorsFromAssemblyContaining<UserRegisterDtoValidator>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -74,6 +72,49 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddScoped<IEmailService, EmailService>();
+
+builder.Services.AddAuthorization(options =>
+{
+    foreach (var permission in Permissions.Products.All)
+    {
+        options.AddPolicy(permission, policy =>
+            policy.Requirements.Add(new PermissionRequirement(permission)));
+    }
+
+    foreach (var permission in Permissions.Categories.All)
+    {
+        options.AddPolicy(permission, policy =>
+            policy.Requirements.Add(new PermissionRequirement(permission)));
+    }
+
+    foreach (var permission in Permissions.Orders.All)
+    {
+        options.AddPolicy(permission, policy =>
+            policy.Requirements.Add(new PermissionRequirement(permission)));
+    }
+
+    foreach (var permission in Permissions.Users.All)
+    {
+        options.AddPolicy(permission, policy =>
+            policy.Requirements.Add(new PermissionRequirement(permission)));
+    }
+
+    foreach (var permission in Permissions.Favourites.All)
+    {
+        options.AddPolicy(permission, policy =>
+            policy.Requirements.Add(new PermissionRequirement(permission)));
+    }
+
+    foreach (var permission in Permissions.Roles.All)
+    {
+        options.AddPolicy(permission, policy =>
+            policy.Requirements.Add(new PermissionRequirement(permission)));
+    }
+
+});
+
+builder.Services.AddSingleton<IAuthorizationHandler, PermissionHandler>();
+
 
 
 // Authentication - JWT

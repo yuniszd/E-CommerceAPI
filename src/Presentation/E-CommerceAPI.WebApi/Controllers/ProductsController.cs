@@ -1,5 +1,6 @@
 ﻿using E_CommerceAPI.Application.Abstracts.Services;
 using E_CommerceAPI.Application.DTOs.ProductDTOs;
+using E_CommerceAPI.Application.Shared;
 using E_CommerceAPI.Domain.Entities;
 using E_CommerceAPI.Persistence.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -21,6 +22,7 @@ namespace E_CommerceAPI.WebApi.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = Permissions.Products.GetMy)]
         public async Task<IActionResult> GetAll([FromQuery] Guid? categoryId, [FromQuery] decimal? minPrice, [FromQuery] decimal? maxPrice, [FromQuery] string search)
         {
             var products = await _service.GetAllAsync(categoryId, minPrice, maxPrice, search);
@@ -38,7 +40,7 @@ namespace E_CommerceAPI.WebApi.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Seller")]
+        [Authorize(Policy = Permissions.Products.Create)]
         public async Task<IActionResult> Create([FromBody] ProductCreateDto dto)
         {
             var created = await _service.CreateAsync(dto);
@@ -49,7 +51,7 @@ namespace E_CommerceAPI.WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "Seller")]
+        [Authorize(Policy = Permissions.Products.Update)]
         public async Task<IActionResult> Update(Guid id, [FromBody] ProductCreateDto dto)
         {
             var result = await _service.UpdateAsync(id, dto);
@@ -60,7 +62,7 @@ namespace E_CommerceAPI.WebApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Seller")]
+        [Authorize(Policy = Permissions.Products.Delete)]
         public async Task<IActionResult> Delete(Guid id)
         {
             var result = await _service.DeleteAsync(id);
