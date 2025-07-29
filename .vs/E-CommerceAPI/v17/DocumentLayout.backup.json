@@ -3,100 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3B95ADF-43D6-4AF6-924F-379ECE9D8CD4}|src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\core\\e-commerceapi.domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B95ADF-43D6-4AF6-924F-379ECE9D8CD4}|src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj|solutionrelative:src\\core\\e-commerceapi.domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\presentation\\e-commerceapi.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|solutionrelative:src\\presentation\\e-commerceapi.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\presentation\\e-commerceapi.webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|solutionrelative:src\\presentation\\e-commerceapi.webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4104031A-8C77-49E9-BCFD-2DB41D3EFF5B}|src\\EmailWorkerService\\EmailWorkerService\\EmailWorkerService.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\emailworkerservice\\emailworkerservice\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4104031A-8C77-49E9-BCFD-2DB41D3EFF5B}|src\\EmailWorkerService\\EmailWorkerService\\EmailWorkerService.csproj|solutionrelative:src\\emailworkerservice\\emailworkerservice\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\infrastructure\\e-commerceapi.persistence\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|solutionrelative:src\\infrastructure\\e-commerceapi.persistence\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\core\\e-commerceapi.application\\abstracts\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|solutionrelative:src\\core\\e-commerceapi.application\\abstracts\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{463153D3-2CE4-4D94-BA3D-71E291209021}|src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\infrastructure\\e-commerceapi.infrastructure\\messaging\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{463153D3-2CE4-4D94-BA3D-71E291209021}|src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj|solutionrelative:src\\infrastructure\\e-commerceapi.infrastructure\\messaging\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3B95ADF-43D6-4AF6-924F-379ECE9D8CD4}|src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\core\\e-commerceapi.domain\\entities\\orderproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B95ADF-43D6-4AF6-924F-379ECE9D8CD4}|src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj|solutionrelative:src\\core\\e-commerceapi.domain\\entities\\orderproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B95ADF-43D6-4AF6-924F-379ECE9D8CD4}|src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\core\\e-commerceapi.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B95ADF-43D6-4AF6-924F-379ECE9D8CD4}|src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj|solutionrelative:src\\core\\e-commerceapi.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B95ADF-43D6-4AF6-924F-379ECE9D8CD4}|src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\core\\e-commerceapi.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B95ADF-43D6-4AF6-924F-379ECE9D8CD4}|src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj|solutionrelative:src\\core\\e-commerceapi.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\infrastructure\\e-commerceapi.persistence\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|solutionrelative:src\\infrastructure\\e-commerceapi.persistence\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B95ADF-43D6-4AF6-924F-379ECE9D8CD4}|src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\core\\e-commerceapi.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B95ADF-43D6-4AF6-924F-379ECE9D8CD4}|src\\Core\\E-CommerceAPI.Domain\\E-CommerceAPI.Domain.csproj|solutionrelative:src\\core\\e-commerceapi.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\presentation\\e-commerceapi.webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|solutionrelative:src\\presentation\\e-commerceapi.webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\core\\e-commerceapi.application\\shared\\permissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|solutionrelative:src\\core\\e-commerceapi.application\\shared\\permissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{463153D3-2CE4-4D94-BA3D-71E291209021}|src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\infrastructure\\e-commerceapi.infrastructure\\authorization\\permissionrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463153D3-2CE4-4D94-BA3D-71E291209021}|src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj|solutionrelative:src\\infrastructure\\e-commerceapi.infrastructure\\authorization\\permissionrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\core\\e-commerceapi.application\\abstracts\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|solutionrelative:src\\core\\e-commerceapi.application\\abstracts\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{463153D3-2CE4-4D94-BA3D-71E291209021}|src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\infrastructure\\e-commerceapi.infrastructure\\authorization\\permissionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463153D3-2CE4-4D94-BA3D-71E291209021}|src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj|solutionrelative:src\\infrastructure\\e-commerceapi.infrastructure\\authorization\\permissionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\infrastructure\\e-commerceapi.persistence\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|solutionrelative:src\\infrastructure\\e-commerceapi.persistence\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\infrastructure\\e-commerceapi.persistence\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|solutionrelative:src\\infrastructure\\e-commerceapi.persistence\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\core\\e-commerceapi.application\\dtos\\categorydtos\\categoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|solutionrelative:src\\core\\e-commerceapi.application\\dtos\\categorydtos\\categoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\infrastructure\\e-commerceapi.persistence\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22B21BB5-E792-4696-A6EB-E40CD6D4134C}|src\\Infrastructure\\E-CommerceAPI.Persistence\\E-CommerceAPI.Persistence.csproj|solutionrelative:src\\infrastructure\\e-commerceapi.persistence\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\core\\e-commerceapi.application\\abstracts\\services\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|solutionrelative:src\\core\\e-commerceapi.application\\abstracts\\services\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\core\\e-commerceapi.application\\shared\\settings\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05B8FBD0-3DE4-4EF6-A3B6-B0FAF084DD17}|src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj|solutionrelative:src\\core\\e-commerceapi.application\\shared\\settings\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\presentation\\e-commerceapi.webapi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|solutionrelative:src\\presentation\\e-commerceapi.webapi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\presentation\\e-commerceapi.webapi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|solutionrelative:src\\presentation\\e-commerceapi.webapi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\presentation\\e-commerceapi.webapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|solutionrelative:src\\presentation\\e-commerceapi.webapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|c:\\users\\yunis\\source\\repos\\e-commerceapi\\src\\presentation\\e-commerceapi.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6848F151-3600-4ACD-94C4-9EA1EE706258}|src\\Presentation\\E-CommerceAPI.WebApi\\E-CommerceAPI.WebApi.csproj|solutionrelative:src\\presentation\\e-commerceapi.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -115,314 +35,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Review.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\Review.cs",
-              "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Domain\\Entities\\Review.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\Review.cs",
-              "RelativeToolTip": "src\\Core\\E-CommerceAPI.Domain\\Entities\\Review.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Title": "Worker.cs",
+              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\EmailWorkerService\\EmailWorkerService\\Worker.cs",
+              "RelativeDocumentMoniker": "src\\EmailWorkerService\\EmailWorkerService\\Worker.cs",
+              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\EmailWorkerService\\EmailWorkerService\\Worker.cs",
+              "RelativeToolTip": "src\\EmailWorkerService\\EmailWorkerService\\Worker.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAB8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T11:36:34.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IOrderService.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IOrderService.cs",
-              "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IOrderService.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IOrderService.cs",
-              "RelativeToolTip": "src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IOrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T11:07:15.317Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrderProduct.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\OrderProduct.cs",
-              "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Domain\\Entities\\OrderProduct.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\OrderProduct.cs",
-              "RelativeToolTip": "src\\Core\\E-CommerceAPI.Domain\\Entities\\OrderProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T11:04:19.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Domain\\Entities\\Order.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\Order.cs",
-              "RelativeToolTip": "src\\Core\\E-CommerceAPI.Domain\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T10:58:43.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Domain\\Entities\\Product.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\Product.cs",
-              "RelativeToolTip": "src\\Core\\E-CommerceAPI.Domain\\Entities\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T10:58:25.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Program.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Program.cs",
-              "RelativeToolTip": "src\\Presentation\\E-CommerceAPI.WebApi\\Program.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAQwLEAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T10:36:43.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PermissionHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Authorization\\PermissionHandler.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Authorization\\PermissionHandler.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Authorization\\PermissionHandler.cs",
-              "RelativeToolTip": "src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Authorization\\PermissionHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T10:34:39.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PermissionRequirement.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Authorization\\PermissionRequirement.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Authorization\\PermissionRequirement.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Authorization\\PermissionRequirement.cs",
-              "RelativeToolTip": "src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Authorization\\PermissionRequirement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T09:29:38.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T16:10:15.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\ProductService.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\ProductService.cs",
-              "RelativeToolTip": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\ProductService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAkwBYAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T16:09:50.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CategoryResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\DTOs\\CategoryDTOs\\CategoryResponseDto.cs",
-              "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Application\\DTOs\\CategoryDTOs\\CategoryResponseDto.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\DTOs\\CategoryDTOs\\CategoryResponseDto.cs",
-              "RelativeToolTip": "src\\Core\\E-CommerceAPI.Application\\DTOs\\CategoryDTOs\\CategoryResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T16:08:19.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\CategoryService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\CategoryService.cs",
-              "RelativeToolTip": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\CategoryService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T16:02:02.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\UserService.cs",
-              "RelativeToolTip": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\UserService.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAADwv5AAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T15:45:10.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IUserService.cs",
-              "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IUserService.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IUserService.cs",
-              "RelativeToolTip": "src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IUserService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T15:44:35.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\EmailService.cs",
-              "RelativeToolTip": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\EmailService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T15:19:10.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IEmailService.cs",
-              "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IEmailService.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IEmailService.cs",
-              "RelativeToolTip": "src\\Core\\E-CommerceAPI.Application\\Abstracts\\Services\\IEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T15:18:16.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "EmailSettings.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Shared\\Settings\\EmailSettings.cs",
-              "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Application\\Shared\\Settings\\EmailSettings.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Shared\\Settings\\EmailSettings.cs",
-              "RelativeToolTip": "src\\Core\\E-CommerceAPI.Application\\Shared\\Settings\\EmailSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T15:16:24.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Permissions.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Shared\\Permissions.cs",
-              "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Application\\Shared\\Permissions.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\Shared\\Permissions.cs",
-              "RelativeToolTip": "src\\Core\\E-CommerceAPI.Application\\Shared\\Permissions.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwD8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T13:44:24.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "RolesController.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\RolesController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\RolesController.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\RolesController.cs",
-              "RelativeToolTip": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\RolesController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T13:42:30.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\AccountsController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\AccountsController.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\AccountsController.cs",
-              "RelativeToolTip": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\AccountsController.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAowI8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T13:41:56.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T13:41:55.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "src\\Presentation\\E-CommerceAPI.WebApi\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAgwDUAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T12:21:48.734Z",
+              "WhenOpened": "2025-07-26T12:19:43.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Presentation\\E-CommerceAPI.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Presentation\\E-CommerceAPI.WebApi\\Program.cs",
+              "RelativeToolTip": "src\\Presentation\\E-CommerceAPI.WebApi\\Program.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAIBJwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T11:54:36.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\OrderService.cs",
               "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\OrderService.cs",
               "RelativeToolTip": "src\\Infrastructure\\E-CommerceAPI.Persistence\\Services\\OrderService.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAowEQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwA4AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T12:16:21.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-26T11:52:21.178Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\Category.cs",
-              "RelativeDocumentMoniker": "src\\Core\\E-CommerceAPI.Domain\\Entities\\Category.cs",
-              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Domain\\Entities\\Category.cs",
-              "RelativeToolTip": "src\\Core\\E-CommerceAPI.Domain\\Entities\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "RabbitMQPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Messaging\\RabbitMQPublisher.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Messaging\\RabbitMQPublisher.cs",
+              "ToolTip": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Messaging\\RabbitMQPublisher.cs",
+              "RelativeToolTip": "src\\Infrastructure\\E-CommerceAPI.Infrastructure\\Messaging\\RabbitMQPublisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T12:11:10.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-26T11:50:04.345Z"
             }
           ]
         }

@@ -17,8 +17,18 @@
   },
   {
     "ContainingType": "E_CommerceAPI.WebApi.Controllers.AccountsController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Accounts/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.AuthController",
     "Method": "Login",
-    "RelativePath": "api/Accounts/login",
+    "RelativePath": "api/Auth/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -29,31 +39,12 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "E_CommerceAPI.Application.Shared.BaseResponse\u00601[[E_CommerceAPI.Application.Shared.TokenResponse, E-CommerceAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      },
-      {
-        "Type": "E_CommerceAPI.Application.Shared.BaseResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 401
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "E_CommerceAPI.WebApi.Controllers.AccountsController",
-    "Method": "GetProfile",
-    "RelativePath": "api/Accounts/profile",
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.AuthController",
+    "Method": "Me",
+    "RelativePath": "api/Auth/me",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -61,9 +52,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "E_CommerceAPI.WebApi.Controllers.AccountsController",
-    "Method": "RefreshToken",
-    "RelativePath": "api/Accounts/refresh-token",
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.AuthController",
+    "Method": "Refresh",
+    "RelativePath": "api/Auth/refresh token",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -77,9 +68,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "E_CommerceAPI.WebApi.Controllers.AccountsController",
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.AuthController",
     "Method": "Register",
-    "RelativePath": "api/Accounts/register",
+    "RelativePath": "api/Auth/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -90,26 +81,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "E_CommerceAPI.Application.Shared.BaseResponse\u00601[[E_CommerceAPI.Application.Shared.TokenResponse, E-CommerceAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      },
-      {
-        "Type": "E_CommerceAPI.Application.Shared.BaseResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 401
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "E_CommerceAPI.WebApi.Controllers.CategoryController",
@@ -130,11 +102,41 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "category",
-        "Type": "E_CommerceAPI.Domain.Entities.Category",
+        "Name": "dto",
+        "Type": "E_CommerceAPI.Application.DTOs.CategoryDTOs.CategoryCreateDto",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.JobsController",
+    "Method": "DelayedJob",
+    "RelativePath": "api/Jobs/delayed",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.JobsController",
+    "Method": "FireAndForgetJob",
+    "RelativePath": "api/Jobs/fire-and-forget",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.JobsController",
+    "Method": "RecurringJob",
+    "RelativePath": "api/Jobs/recurring",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -147,7 +149,7 @@
     "Parameters": [
       {
         "Name": "productId",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -163,7 +165,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -199,7 +201,7 @@
     "Parameters": [
       {
         "Name": "categoryId",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
@@ -229,9 +231,34 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "product",
-        "Type": "E_CommerceAPI.Domain.Entities.Product",
-        "IsRequired": true
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -246,7 +273,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -262,12 +289,12 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       },
       {
-        "Name": "product",
-        "Type": "E_CommerceAPI.Domain.Entities.Product",
+        "Name": "dto",
+        "Type": "E_CommerceAPI.Application.DTOs.ProductDTOs.ProductCreateDto",
         "IsRequired": true
       }
     ],
@@ -283,7 +310,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -300,9 +327,25 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "E_CommerceAPI.WebApi.Controllers.RoleController",
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.RolesController",
+    "Method": "CreateRole",
+    "RelativePath": "api/Roles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.RolesController",
     "Method": "GetRoles",
-    "RelativePath": "api/Role",
+    "RelativePath": "api/Roles",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -310,25 +353,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "E_CommerceAPI.WebApi.Controllers.RoleController",
-    "Method": "CreateRole",
-    "RelativePath": "api/Role",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "E_CommerceAPI.Application.DTOs.RoleDTOs.CreateRoleDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "E_CommerceAPI.WebApi.Controllers.RoleController",
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.RolesController",
     "Method": "DeleteRole",
-    "RelativePath": "api/Role/{roleName}",
+    "RelativePath": "api/Roles/{roleName}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -342,16 +369,68 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "E_CommerceAPI.WebApi.Controllers.RoleController",
-    "Method": "AssignRole",
-    "RelativePath": "api/Role/assign",
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.RolesController",
+    "Method": "AssignRoleToUser",
+    "RelativePath": "api/Roles/assign",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "E_CommerceAPI.Application.DTOs.RoleDTOs.AssignRoleDto",
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "roleName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.RolesController",
+    "Method": "GetAllPermissions",
+    "RelativePath": "api/Roles/GetAllPermissions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.RolesController",
+    "Method": "RemoveRoleFromUser",
+    "RelativePath": "api/Roles/remove",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "roleName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_CommerceAPI.WebApi.Controllers.RolesController",
+    "Method": "GetUserRoles",
+    "RelativePath": "api/Roles/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

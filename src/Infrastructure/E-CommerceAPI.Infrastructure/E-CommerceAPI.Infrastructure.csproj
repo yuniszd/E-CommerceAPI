@@ -8,11 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <PackageReference Include="MailKit" Version="4.13.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.17" />
+    <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+    <PackageReference Include="RabbitMQ.Client" Version="7.1.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.17" />
+    <ProjectReference Include="..\..\Core\E-CommerceAPI.Application\E-CommerceAPI.Application.csproj" />
   </ItemGroup>
 
 </Project>

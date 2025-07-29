@@ -11,3 +11,8 @@ C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infra
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\refint\E-CommerceAPI.Infrastructure.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\E-CommerceAPI.Infrastructure.pdb
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\ref\E-CommerceAPI.Infrastructure.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\bin\Debug\net8.0\E-CommerceAPI.Application.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\bin\Debug\net8.0\E-CommerceAPI.Domain.dll
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\bin\Debug\net8.0\E-CommerceAPI.Application.pdb
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\bin\Debug\net8.0\E-CommerceAPI.Domain.pdb
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Infrastructure\obj\Debug\net8.0\E-Commer.6F3FB2C6.Up2Date

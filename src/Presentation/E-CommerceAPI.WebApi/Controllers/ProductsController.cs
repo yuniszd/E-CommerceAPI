@@ -41,14 +41,18 @@ namespace E_CommerceAPI.WebApi.Controllers
 
         [HttpPost]
         [Authorize(Policy = Permissions.Products.Create)]
-        public async Task<IActionResult> Create([FromBody] ProductCreateDto dto)
+        public async Task<IActionResult> Create([FromForm] ProductCreateDto dto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             var created = await _service.CreateAsync(dto);
             if (!created)
                 return Forbid();
 
             return Ok("Product created successfully.");
         }
+
 
         [HttpPut("{id}")]
         [Authorize(Policy = Permissions.Products.Update)]
@@ -73,7 +77,7 @@ namespace E_CommerceAPI.WebApi.Controllers
         }
 
         [HttpGet("my")]
-        [Authorize(Roles = "Seller")]
+        [Authorize(Policy = Permissions.Products.GetMy)]
         public async Task<IActionResult> GetMyProducts()
         {
             var products = await _service.GetMyProductsAsync();

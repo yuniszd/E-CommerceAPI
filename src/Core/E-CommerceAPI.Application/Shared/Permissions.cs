@@ -118,4 +118,17 @@ public static class Permissions
             Create
         };
     }
+
+    public static List<string> GetAllPermissions()
+    {
+        var allPermissions = new List<string>();
+        allPermissions.AddRange(Products.All);
+        allPermissions.AddRange(Categories.All);
+        allPermissions.AddRange(Orders.All);
+        allPermissions.AddRange(Users.All);
+        allPermissions.AddRange(Favourites.All);
+        allPermissions.AddRange(Roles.All);
+
+        return allPermissions;
+    }
 }

@@ -13,8 +13,16 @@ using E_CommerceAPI.Application.Shared.Settings;
 using E_CommerceAPI.Application.Shared;
 using E_CommerceAPI.Infrastructure.Authorization;
 using Microsoft.AspNetCore.Authorization;
+using System.IdentityModel.Tokens.Jwt;
+using Hangfire;
+using E_CommerceAPI.Infrastructure.Services;
+using NETCore.MailKit.Extensions;
+using E_CommerceAPI.Infrastructure.Messaging;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// 🔷 Clear default claim type mapping (ROLE claim üçün MÜTLƏQ)
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -22,13 +30,13 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "E-Commerce API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "E-Commerce API", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
         Name = "Authorization",
         In = ParameterLocation.Header,
-        Type = SecuritySchemeType.ApiKey,
+        Type = SecuritySchemeType.Http,
         Scheme = "Bearer"
     });
 
@@ -61,10 +69,10 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
     options.Password.RequireDigit = true;
     options.Password.RequiredLength = 6;
 })
-    .AddEntityFrameworkStores<AppDbContext>()
-    .AddDefaultTokenProviders();
+.AddEntityFrameworkStores<AppDbContext>()
+.AddDefaultTokenProviders();
 
-builder.Services.AddScoped<ITokenService,TokenService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
@@ -72,52 +80,26 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.Configure<JWTSettings>(builder.Configuration.GetSection("JWTSettings"));
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSingleton<RabbitMQPublisher>();
 
-builder.Services.AddAuthorization(options =>
+builder.Services.AddMailKit(config =>
 {
-    foreach (var permission in Permissions.Products.All)
-    {
-        options.AddPolicy(permission, policy =>
-            policy.Requirements.Add(new PermissionRequirement(permission)));
-    }
-
-    foreach (var permission in Permissions.Categories.All)
-    {
-        options.AddPolicy(permission, policy =>
-            policy.Requirements.Add(new PermissionRequirement(permission)));
-    }
-
-    foreach (var permission in Permissions.Orders.All)
-    {
-        options.AddPolicy(permission, policy =>
-            policy.Requirements.Add(new PermissionRequirement(permission)));
-    }
-
-    foreach (var permission in Permissions.Users.All)
-    {
-        options.AddPolicy(permission, policy =>
-            policy.Requirements.Add(new PermissionRequirement(permission)));
-    }
-
-    foreach (var permission in Permissions.Favourites.All)
-    {
-        options.AddPolicy(permission, policy =>
-            policy.Requirements.Add(new PermissionRequirement(permission)));
-    }
-
-    foreach (var permission in Permissions.Roles.All)
-    {
-        options.AddPolicy(permission, policy =>
-            policy.Requirements.Add(new PermissionRequirement(permission)));
-    }
-
+    config.UseMailKit(builder.Configuration.GetSection("EmailSettings").Get<NETCore.MailKit.Infrastructure.Internal.MailKitOptions>());
 });
 
-builder.Services.AddSingleton<IAuthorizationHandler, PermissionHandler>();
+
+builder.Services.AddHangfire(config =>
+{
+    config.UseSqlServerStorage(builder.Configuration.GetConnectionString("HangfireConnection"));
+});
+
+builder.Services.AddHangfireServer();
 
 
-
-// Authentication - JWT
+// 🔷 Authentication - JWT
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -131,28 +113,43 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-        ValidAudience = builder.Configuration["Jwt:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        ValidIssuer = builder.Configuration["JWTSettings:Issuer"],
+        ValidAudience = builder.Configuration["JWTSettings:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWTSettings:Key"])),
+        RoleClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role" // 🔴 BURADA DİQQƏT
     };
 });
 
-// Authorization
+
+// 🔷 Authorization - Policy-based & Role-based
 builder.Services.AddAuthorization(options =>
 {
+    // Permissions-based policies
+    foreach (var permission in Permissions.GetAllPermissions())
+    {
+        options.AddPolicy(permission, policy =>
+            policy.Requirements.Add(new PermissionRequirement(permission)));
+    }
+
+    // Example: Verified seller policy
     options.AddPolicy("VerifiedSellerOnly", policy =>
         policy.RequireClaim("IsVerifiedSeller", "True"));
 });
 
+// 🔷 Register PermissionHandler
+builder.Services.AddSingleton<IAuthorizationHandler, PermissionHandler>();
+
+
 var app = builder.Build();
 
+// 🔷 Development Swagger UI
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "E-Commerce API V1");
-        c.RoutePrefix = string.Empty; // Swagger root-da açılsın
+        c.RoutePrefix = string.Empty;
     });
 }
 
@@ -161,7 +158,14 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Roles yaradılması - düzgün async pattern
+
+app.UseHangfireDashboard("/hangfire");
+
+// TEST job – API start olunanda bir test job yaratsın
+BackgroundJob.Enqueue(() => Console.WriteLine("Salam, Hangfire işləyir!"));
+
+
+// 🔷 Seed Roles
 await using (var scope = app.Services.CreateAsyncScope())
 {
     var services = scope.ServiceProvider;

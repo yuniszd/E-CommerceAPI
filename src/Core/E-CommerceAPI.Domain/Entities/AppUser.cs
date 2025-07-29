@@ -9,5 +9,13 @@ public class AppUser : IdentityUser
     public ICollection<Favourite> Favourites { get; set; }
     public ICollection<Review> Reviews { get; set; }
     public ICollection<RefreshToken> RefreshTokens { get; set; }
-}
 
+    public AppUser()
+    {
+        Products = new List<Product>();
+        Orders = new List<Order>();
+        Favourites = new List<Favourite>();
+        Reviews = new List<Review>();
+        RefreshTokens = new List<RefreshToken>();
+    }
+}

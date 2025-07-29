@@ -1,6 +1,6 @@
 @E_CommerceAPI.WebApi_HostAddress = http://localhost:5220
 
-GET {{E_CommerceAPI.WebApi_HostAddress}}/weatherforecast/
+GET {{E_CommerceAPI.WebApi_HostAddress}}/swagger/
 Accept: application/json
 
 ###

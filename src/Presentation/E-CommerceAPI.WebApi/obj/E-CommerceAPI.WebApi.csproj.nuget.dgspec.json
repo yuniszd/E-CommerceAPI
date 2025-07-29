@@ -57,6 +57,10 @@
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
             }
           },
           "imports": [
@@ -186,7 +190,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -204,9 +212,21 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.13.0, )"
+            },
             "Microsoft.AspNetCore.Authorization": {
               "target": "Package",
               "version": "[8.0.17, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[7.1.2, )"
             }
           },
           "imports": [
@@ -256,6 +276,9 @@
             "projectReferences": {
               "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj": {
                 "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Core\\E-CommerceAPI.Application\\E-CommerceAPI.Application.csproj"
+              },
+              "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Yunis\\source\\repos\\E-CommerceAPI\\src\\Infrastructure\\E-CommerceAPI.Infrastructure\\E-CommerceAPI.Infrastructure.csproj"
               }
             }
           }
@@ -275,6 +298,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.8.20, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.13.0, )"
+            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.3.1, )"
@@ -286,6 +317,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.17, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.13.0, )"
             }
           },
           "imports": [
@@ -360,6 +395,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.8.20, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.20, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.8.20, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.17, )"

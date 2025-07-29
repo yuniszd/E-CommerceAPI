@@ -1,5 +1,6 @@
 ﻿using E_CommerceAPI.Application.Abstracts.Services;
 using E_CommerceAPI.Application.DTOs.CategoryDTOs;
+using E_CommerceAPI.Application.Shared;
 using E_CommerceAPI.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -19,17 +20,16 @@ namespace E_CommerceAPI.WebApi.Controllers
             _categoryService = categoryService;
         }
 
-        // ✅ GET: api/categories
         [HttpGet]
+        [Authorize(Policy = Permissions.Categories.GetAll)]
         public async Task<IActionResult> GetCategories()
         {
             var categories = await _categoryService.GetAllCategoriesAsync();
             return Ok(categories);
         }
 
-        // ✅ POST: api/categories
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Policy = Permissions.Categories.MainCreate)]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryCreateDto dto)
         {
             if (string.IsNullOrWhiteSpace(dto.Name))

@@ -1,9 +1,3 @@
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.csproj.AssemblyReference.cache
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.AssemblyInfoInputs.cache
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.AssemblyInfo.cs
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.csproj.CoreCompileInputs.cache
-C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.sourcelink.json
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\bin\Debug\net8.0\E-CommerceAPI.Persistence.deps.json
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\bin\Debug\net8.0\E-CommerceAPI.Persistence.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\bin\Debug\net8.0\E-CommerceAPI.Persistence.pdb
@@ -11,6 +5,12 @@ C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persi
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\bin\Debug\net8.0\E-CommerceAPI.Domain.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\bin\Debug\net8.0\E-CommerceAPI.Application.pdb
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\bin\Debug\net8.0\E-CommerceAPI.Domain.pdb
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.csproj.AssemblyReference.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.AssemblyInfoInputs.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.AssemblyInfo.cs
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.sourcelink.json
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-Commer.E23A3AF5.Up2Date
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\E-CommerceAPI.Persistence.dll
 C:\Users\Yunis\source\repos\E-CommerceAPI\src\Infrastructure\E-CommerceAPI.Persistence\obj\Debug\net8.0\refint\E-CommerceAPI.Persistence.dll

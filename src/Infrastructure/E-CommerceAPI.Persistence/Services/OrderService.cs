@@ -1,5 +1,7 @@
 ﻿using E_CommerceAPI.Application.Abstracts.Services;
 using E_CommerceAPI.Domain.Entities;
+using E_CommerceAPI.Infrastructure.Messaging;
+using Hangfire;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
@@ -10,20 +12,24 @@ public class OrderService : IOrderService
 {
     private readonly AppDbContext _context;
     private readonly IHttpContextAccessor _httpContextAccessor;
+    private readonly RabbitMQPublisher _rabbitMQPublisher;
 
-    public OrderService(AppDbContext context, IHttpContextAccessor httpContextAccessor)
+    public OrderService(AppDbContext context,
+                        IHttpContextAccessor httpContextAccessor,
+                        RabbitMQPublisher rabbitMQPublisher)
     {
         _context = context;
         _httpContextAccessor = httpContextAccessor;
+        _rabbitMQPublisher = rabbitMQPublisher;
     }
 
     public async Task<Order> CreateOrderAsync(Guid productId)
     {
         var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
         var product = await _context.Products.FindAsync(productId);
+
         if (product == null)
             throw new Exception("Product not found.");
-
 
         var order = new Order
         {
@@ -34,6 +40,18 @@ public class OrderService : IOrderService
 
         _context.Orders.Add(order);
         await _context.SaveChangesAsync();
+
+        var buyer = await _context.Users.FindAsync(order.BuyerId);
+        var seller = await _context.Users.FindAsync(product.OwnerId);
+
+        _rabbitMQPublisher.PublishOrderCreated(new OrderCreatedMessage
+        {
+            BuyerEmail = buyer.Email,
+            BuyerFullname = buyer.Fullname,
+            SellerEmail = seller.Email,
+            SellerFullname = seller.Fullname,
+            ProductTitle = product.Title
+        });
 
         return order;
     }
@@ -68,7 +86,7 @@ public class OrderService : IOrderService
             return null;
 
         if (order.BuyerId != userId && order.Product.OwnerId != userId)
-            return null; 
+            return null;
 
         return order;
     }

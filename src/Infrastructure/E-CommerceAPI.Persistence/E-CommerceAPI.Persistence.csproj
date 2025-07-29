@@ -8,17 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Hangfire.Core" Version="1.8.20" />
+    <PackageReference Include="MailKit" Version="4.13.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.17" />
+    <PackageReference Include="MimeKit" Version="4.13.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\E-CommerceAPI.Application\E-CommerceAPI.Application.csproj" />
+    <ProjectReference Include="..\E-CommerceAPI.Infrastructure\E-CommerceAPI.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

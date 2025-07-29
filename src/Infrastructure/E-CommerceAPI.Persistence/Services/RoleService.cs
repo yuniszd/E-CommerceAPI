@@ -10,7 +10,8 @@ public class RoleService : IRoleService
     private readonly RoleManager<IdentityRole> _roleManager;
     private readonly UserManager<AppUser> _userManager;
 
-    public RoleService(RoleManager<IdentityRole> roleManager, UserManager<AppUser> userManager)
+    public RoleService(RoleManager<IdentityRole> roleManager,
+                       UserManager<AppUser> userManager)
     {
         _roleManager = roleManager;
         _userManager = userManager;
@@ -18,13 +19,15 @@ public class RoleService : IRoleService
 
     public async Task<List<RoleResponseDto>> GetRolesAsync()
     {
-        return _roleManager.Roles
+        var roles = _roleManager.Roles
             .Select(r => new RoleResponseDto
             {
                 Id = r.Id,
-                Name = r.Name
+                Name = r.Name ?? string.Empty
             })
             .ToList();
+
+        return await Task.FromResult(roles);
     }
 
     public async Task<bool> CreateRoleAsync(string roleName)

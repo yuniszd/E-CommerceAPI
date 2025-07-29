@@ -1,4 +1,5 @@
 ﻿using E_CommerceAPI.Application.Abstracts.Services;
+using E_CommerceAPI.Application.Shared;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,9 +19,8 @@ namespace E_CommerceAPI.WebApi.Controllers
             _orderService = orderService;
         }
 
-        // ✅ POST /api/orders
         [HttpPost]
-        [Authorize(Roles = "Buyer")]
+        [Authorize(Policy = Permissions.Orders.Create)]
         public async Task<IActionResult> CreateOrder([FromBody] Guid productId)
         {
             try
@@ -34,25 +34,24 @@ namespace E_CommerceAPI.WebApi.Controllers
             }
         }
 
-        // ✅ GET /api/orders/my
         [HttpGet("my")]
+        [Authorize(Policy = Permissions.Orders.GetMy)]
         public async Task<IActionResult> GetMyOrders()
         {
             var orders = await _orderService.GetMyOrdersAsync();
             return Ok(orders);
         }
 
-        // ✅ GET /api/orders/my-sales
         [HttpGet("my-sales")]
-        [Authorize(Roles = "Seller")]
+        [Authorize(Policy = Permissions.Orders.GetMy)]
         public async Task<IActionResult> GetMySales()
         {
             var orders = await _orderService.GetMySalesAsync();
             return Ok(orders);
         }
 
-        // ✅ GET /api/orders/{id}
         [HttpGet("{id}")]
+        [Authorize(Policy = Permissions.Orders.GetMySales)]
         public async Task<IActionResult> GetOrderById(Guid id)
         {
             var order = await _orderService.GetOrderByIdAsync(id);

@@ -19,6 +19,7 @@ public class UserService : IUserService
 {
     private readonly UserManager<AppUser> _userManager;
     private readonly SignInManager<AppUser> _signInManager;
+    private readonly RoleManager<IdentityRole> _roleManager;
     private readonly ITokenService _tokenService;
     private readonly AppDbContext _context;
     private readonly IEmailService _emailService;
@@ -27,13 +28,15 @@ public class UserService : IUserService
                            SignInManager<AppUser> signInManager,
                            ITokenService tokenService,
                            AppDbContext context,
-                           IEmailService emailService)
+                           IEmailService emailService,
+                           RoleManager<IdentityRole> roleManager)
     {
         _userManager = userManager;
         _signInManager = signInManager;
         _tokenService = tokenService;
         _context = context;
         _emailService = emailService;
+        _roleManager = roleManager;
     }
 
     public async Task<BaseResponse<TokenResponse>> LoginAsync(UserLoginDto dto)
@@ -55,8 +58,8 @@ public class UserService : IUserService
             };
 
         var roles = await _userManager.GetRolesAsync(user);
-
-        var accessToken = _tokenService.GenerateJwtToken(user, roles);
+        var userClaims = new List<string>();
+        var accessToken = _tokenService.GenerateJwtToken(user, roles, userClaims);
         var refreshToken = _tokenService.GenerateRefreshToken(user.Id);
 
         user.RefreshTokens.Add(refreshToken);
@@ -97,9 +100,9 @@ public class UserService : IUserService
                 Success = false,
                 Message = "Refresh token expired."
             };
-
+        var userClaims = new List<string>();
         var roles = await _userManager.GetRolesAsync(user);
-        var newAccessToken = _tokenService.GenerateJwtToken(user, roles);
+        var newAccessToken = _tokenService.GenerateJwtToken(user, roles, userClaims);
         var newRefreshToken = _tokenService.GenerateRefreshToken(user.Id);
 
         user.RefreshTokens.Remove(tokenEntity);
